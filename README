@@ -78,8 +78,8 @@ technical-test-ket/
 
 Once the containers are up and running:
 
-- Access the backend service at `http://localhost:4000`.
-- Access the frontend service at `http://localhost:3000`.
+- Access the backend service at `http://localhost:3000`.
+- Access the frontend service at `http://localhost:8080`.
 
 
 ## Troubleshooting

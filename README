@@ -58,7 +58,7 @@ technical-test-ket/
 ├── backend/
 │   ├── Dockerfile
 │   ├── package.json
-│   ├── index.js
+│   ├── server.js
 │   └── ...
 ├── frontend/
 │   ├── Dockerfile

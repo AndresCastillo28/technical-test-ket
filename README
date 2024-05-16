@@ -17,3 +17,108 @@ Create a `.env` file in the root directory and add the following variables:
 ```plaintext
 MONGO_URI=mongodb://mongo:27017/ketDBDocker
 SECRET_JWT_SEED=your_secret_jwt_seed
+```
+
+## Installation
+
+To set up this project, follow these steps:
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your-username/technical-test-ket.git
+   cd technical-test-ket
+   ```
+
+2. **Create the `.env` file:**
+
+   ```sh
+   touch .env
+   ```
+
+   Add the following content to the `.env` file:
+
+   ```plaintext
+   MONGO_URI=mongodb://mongo:27017/ketDBDocker
+   SECRET_JWT_SEED=your_secret_jwt_seed
+   ```
+
+3. **Build and run the containers using Docker Compose:**
+
+   ```sh
+   docker-compose up --build
+   ```
+
+   This command will start the frontend, backend services, and the MongoDB database.
+
+## Project Structure
+
+```
+technical-test-ket/
+├── backend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── index.js
+│   └── ...
+├── frontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── src/
+│   └── ...
+├── docker-compose.yml
+└── .env
+```
+
+- **backend/**: Contains the Node.js backend service code.
+- **frontend/**: Contains the Angular frontend service code.
+- **docker-compose.yml**: Docker Compose configuration file.
+- **.env**: Environment variables file.
+
+## Usage
+
+Once the containers are up and running:
+
+- Access the backend service at `http://localhost:4000`.
+- Access the frontend service at `http://localhost:3000`.
+
+
+## Troubleshooting
+
+If you encounter any issues, try the following steps:
+
+1. **Restart Docker services:**
+
+   Restart Docker Desktop or the Docker daemon.
+
+2. **Rebuild containers:**
+
+   ```sh
+   docker-compose down
+   docker-compose up --build
+   ```
+
+3. **Check logs:**
+
+   View the logs of a specific container:
+
+   ```sh
+   docker logs <container_id>
+   ```
+
+4. **Prune Docker system:**
+
+   Clean up unused Docker objects:
+
+   ```sh
+   docker system prune -a
+   ```
+
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact me at [andresantiagocastillo@gmail.com](mailto:andresantiagocastillo@gmail.com).
+```

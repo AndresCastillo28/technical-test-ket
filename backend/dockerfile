@@ -1,0 +1,26 @@
+# Set the base image to Node.js v20.9.0
+FROM node:20.9.0
+
+# Create a specific working directory instead of using the root
+WORKDIR /usr/src/app
+
+# Install dependencies
+# The asterisk ensures that both package.json and package-lock.json are copied
+# where available
+COPY package*.json ./
+
+# Execute npm install to install the dependencies
+RUN npm install
+
+# Copy the project files
+COPY . .
+
+# Expose the port used by your application
+EXPOSE 3000
+
+# Define environment variables
+ENV MONGO_URI=${MONGO_URI}
+ENV SECRET_JWT_SEED=${SECRET_JWT_SEED}
+
+# Command to run the application
+CMD ["node", "server.js"]

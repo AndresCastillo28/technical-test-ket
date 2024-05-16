@@ -1,0 +1,119 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$md-elearningsupportportalwebapp-primary: (
+    50 : #F44A3E,
+    100 : #F44A3E,
+    200 : #F44A3E,
+    300 : #F44A3E,
+    400 : #F44A3E,
+    500 : #F44A3E,
+    600 : #F44A3E,
+    700 : #F44A3E,
+    800 : #F44A3E,
+    900 : #F44A3E,
+    A100 : #F44A3E,
+    A200 : #F44A3E,
+    A400 : #F44A3E,
+    A700 : #F44A3E,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-elearningsupportportalwebapp-warn: (
+    50 : red,
+    100 : red,
+    200 : red,
+    300 : red,
+    400 : red,
+    500 : red,
+    600 : red,
+    700 : red,
+    800 : red,
+    900 : red,
+    A100 : red,
+    A200 : red,
+    A400 : red,
+    A700 : red,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$md-elearningsupportportalwebapp-accent: (
+    50 : #333639,
+    100 : #333639,
+    200 : #333639,
+    300 : #333639,
+    400 : #333639,
+    500 : #333639,
+    600 : #333639,
+    700 : #333639,
+    800 : #333639,
+    900 : #333639,
+    A100 : #333639,
+    A200 : #333639,
+    A400 : #333639,
+    A700 : #333639,
+    contrast: (
+        50 : #ffffff,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-app-primary: mat.define-palette($md-elearningsupportportalwebapp-primary, 50);
+$my-app-accent:  mat.define-palette($md-elearningsupportportalwebapp-accent);
+$my-app-warn:  mat.define-palette($md-elearningsupportportalwebapp-warn);
+
+
+$my-app-theme: mat.define-light-theme((
+  color: (
+    primary: $my-app-primary,
+    accent: $my-app-accent,
+    warn: $my-app-warn
+  )
+));
+
+
+@include mat.all-component-themes($my-app-theme);

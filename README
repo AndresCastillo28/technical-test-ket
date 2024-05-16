@@ -1,0 +1,19 @@
+# Technical Test KET
+
+## Overview
+
+This project is a technical test that includes both frontend and backend services along with a MongoDB database. The backend service is built with Node.js, the frontend is built with Angular, and Docker is used for containerization.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- You have installed [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/).
+- You have created a `.env` file in the root directory with the necessary environment variables.
+
+## Environment Variables
+
+Create a `.env` file in the root directory and add the following variables:
+
+```plaintext
+MONGO_URI=mongodb://mongo:27017/ketDBDocker
+SECRET_JWT_SEED=your_secret_jwt_seed

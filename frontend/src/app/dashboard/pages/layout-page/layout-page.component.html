@@ -1,0 +1,87 @@
+<div class="vh-100 d-flex flex-column">
+  <mat-toolbar>
+    <img
+      src="https://www.kuepa.com/logo-kuepa-01-ce02783ec8555816498a749b2c879fb8.png"
+      class="img-fluid d-none d-md-block rounded"
+      width="100px"
+      alt=""
+    />
+    <img
+      src="https://www.kuepa.com/logo-kuepa-01-ce02783ec8555816498a749b2c879fb8.png"
+      class="img-fluid d-block d-md-none rounded"
+      width="50px"
+      alt=""
+    />
+    <span class="example-spacer"></span>
+    &nbsp;
+    <img
+      src="https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg"
+      class="img-fluid d-none d-md-block rounded rounded-circle"
+      width="30px"
+    />
+    <img
+      src="https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg"
+      class="img-fluid d-block d-md-none rounded rounded-circle"
+      width="20px"
+    />
+    &nbsp;
+    <span class="d-none d-md-inline">{{ user.name }} -
+      <span
+        [ngClass]="{
+          'text-success': user.role === 'moderator',
+          'text-info': user.role !== 'moderator'
+        }"
+      >
+        {{ user.role | titlecase }}
+      </span>
+    </span>
+    <span class="d-inline d-md-none small-text">{{ user.name }} -
+      <span
+        [ngClass]="{
+          'text-success': user.role === 'moderator',
+          'text-info': user.role !== 'moderator'
+        }"
+      >
+        {{ user.role | titlecase }}
+      </span>
+    </span>
+    &nbsp;
+    <button
+      type="button"
+      matTooltip="Logout"
+      color="warn"
+      mat-mini-fab
+      (click)="logout()"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="container-fluid d-flex align-items-center justify-content-center flex-grow-1">
+    <div class="row w-100">
+      <div class="col-12 col-md-12 col-sm-12 col-lg-6 mx-auto">
+        <div class="video-container border">
+          <iframe
+            [src]="'https://www.youtube.com/embed/gRgTiQCRFxI' | safe"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-chat (chatClosed)="toggleChat()" *ngIf="isChatOpen"></app-chat>
+  <div class="floating-button-container" *ngIf="!isChatOpen">
+    <button
+      mat-fab
+      matTooltip="Open chat"
+      color="primary"
+      class="floating-button"
+      (click)="toggleChat()"
+    >
+      <mat-icon>message</mat-icon>
+    </button>
+  </div>
+</div>
